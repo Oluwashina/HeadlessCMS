@@ -11,12 +11,8 @@ const parse = require('pg-connection-string').parse;
           password: config.password,
           // ssl: env('DATABASE_SSL', false),
           ssl: {
-            rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
-          },
-          options: {
-            ssl: false
-          }
-          
+            rejectUnauthorized: false
+          },  
         },
         debug: false,
       },
